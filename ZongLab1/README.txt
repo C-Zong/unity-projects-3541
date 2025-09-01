@@ -48,15 +48,15 @@ Submission formatting
 [Required] - is the submission in the requested format / can it be quickly and easily loaded, built, and run
 
 Other [All Optional]
-Put your project into version control, most likely Github
+Put your project into version control, most likely Github (https://github.com/C-Zong/unity-projects-3541/tree/main/ZongLab1)
 Have a skybox for the scene
 
 📦 Assets & References
 
 Plane material: Granite Tile (https://polyhaven.com/zh/a/granite_tile)
 Cube material: Diagonal Parquet (https://polyhaven.com/zh/a/diagonal_parquet)
-People (animations): RPG Animations Pack Free(https://assetstore.unity.com/packages/3d/animations/rpg-animations-pack-free-288783)
-Skybox: City Street Skyboxes Vol.1(https://assetstore.unity.com/packages/2d/textures-materials/sky/city-street-skyboxes-vol-1-157401)
+People (animations): RPG Animations Pack Free (https://assetstore.unity.com/packages/3d/animations/rpg-animations-pack-free-288783)
+Skybox: City Street Skyboxes Vol.1 (https://assetstore.unity.com/packages/2d/textures-materials/sky/city-street-skyboxes-vol-1-157401)
 
 📑 Notes on Development
 
