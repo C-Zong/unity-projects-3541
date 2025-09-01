@@ -1,8 +1,8 @@
 Unity Lab1 - CSE 3541 Coursework
 
-🧑‍💻 Name
+Name: Chenyang Zong 🧑‍💻
 
-Chenyang Zong
+Unity version: 2022.6 (6000.2.1f1) 🟢
 
 🎮 User Input
 
