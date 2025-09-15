@@ -23,6 +23,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
+                },
+                {
+                    "name": "SceneRotation",
+                    "type": "Button",
+                    "id": "5cf8daba-0f81-47fc-9a9c-23737aeb2620",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -91,6 +100,17 @@
                     "action": "Move",
                     "isComposite": false,
                     "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "47730031-4adb-401d-8d9e-6e590f1e3259",
+                    "path": "<Keyboard>/0",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "SceneRotation",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         }

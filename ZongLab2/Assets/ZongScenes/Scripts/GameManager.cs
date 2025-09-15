@@ -14,6 +14,8 @@ public class GameManager : MonoBehaviour
     bool isMainCameraActive;
     GameObject player;
     PlayerController playerController;
+    bool isSceneRotating = false;
+    Vector3 pivotPoint;
 
     void Start()
     {
@@ -23,6 +25,7 @@ public class GameManager : MonoBehaviour
 
         // Generate maze and setup game
         mazeGenerator.GenerateAndDrawMaze();
+        pivotPoint = new Vector3((mazeGenerator.width / 2) * cubeSize, 0, (mazeGenerator.height / 2) * cubeSize);
         gameSetup.SetupGame();
 
         // Initialize cameras
@@ -33,6 +36,14 @@ public class GameManager : MonoBehaviour
         // Set player controller's maze data
         playerController = player.GetComponent<PlayerController>();
         playerController.SetupInitialGame(maze, startPos);
+    }
+
+    void FixedUpdate()
+    {
+        if (isMainCameraActive && isSceneRotating)
+        {
+            this.transform.RotateAround(pivotPoint, Vector3.up, 20 * Time.deltaTime);
+        }
     }
 
     // Switch between main camera and player camera
@@ -50,6 +61,15 @@ public class GameManager : MonoBehaviour
         if (player != null)
         {
             playerController.Move(input);
+        }
+    }
+
+    // Change scene rotation state if main camera is active
+    private void OnSceneRotation()
+    {
+        if (isMainCameraActive)
+        {
+            isSceneRotating = !isSceneRotating;
         }
     }
 

@@ -14,6 +14,7 @@ public class RandomMazeGenerator : MonoBehaviour
     public GameObject wallPrefab;
     public GameObject floorPrefab;
     public float cubeSize = 1.0f;
+    public float lightSpawnChance = 0.1f;
     int[,] maze;
     private GameManager gameManager;
 
@@ -112,6 +113,18 @@ public class RandomMazeGenerator : MonoBehaviour
                     Vector3 pos = new Vector3(x * cubeSize, 0, z * cubeSize);
                     GameObject wall = Instantiate(wallPrefab, pos, Quaternion.identity, rowParent.transform);
                     wall.name = $"Wall_{z}_{x}";
+                }
+                // Randomly place lights in open spaces
+                else if (maze[z, x] == 0 && Random.value < lightSpawnChance && (x != startPos.x || z != startPos.y))
+                {
+                    GameObject lightObj = new GameObject($"Light_{z}_{x}");
+                    lightObj.transform.position = new Vector3(x * cubeSize, cubeSize * 1.2f, z * cubeSize);
+                    lightObj.transform.parent = rowParent.transform;
+                    Light lightComp = lightObj.AddComponent<Light>();
+                    lightComp.type = LightType.Point;
+                    lightComp.range = cubeSize * 3f;
+                    lightComp.intensity = 1.5f;
+                    lightComp.color = Color.yellow;
                 }
             }
         }

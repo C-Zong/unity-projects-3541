@@ -1,9 +1,10 @@
 using UnityEngine;
 
-// Sets up the game by placing the player and a light at the end position.
+// Sets up the game by placing the player and a marker at the end position.
 public class GameSetup : MonoBehaviour
 {
     public GameObject playerPrefab;
+    public GameObject markerPrefab;
     Vector2Int startPos;
     Vector2Int endPos;
     float cubeSize;
@@ -18,7 +19,7 @@ public class GameSetup : MonoBehaviour
         cubeSize = gameManager.GetCubeSize();
         playerCamera = gameManager.PlayerCamera;
         gameManager.SetPlayer(SetupPlayer());
-        PlaceLightAtEnd();
+        PlaceMarkerAtEnd();
     }
 
     // Sets up the player at the starting position and configures the player camera
@@ -32,14 +33,11 @@ public class GameSetup : MonoBehaviour
         return player;
     }
 
-    // Places a light at the end position
-    void PlaceLightAtEnd()
+    // Places a marker at the end position
+    void PlaceMarkerAtEnd()
     {
-        GameObject endMarker = GameObject.CreatePrimitive(PrimitiveType.Sphere);
+        GameObject endMarker = Instantiate(markerPrefab, new Vector3(endPos.x * cubeSize, 0.3f * cubeSize, endPos.y * cubeSize), Quaternion.identity, this.transform);
         endMarker.name = "EndMarker";
-        endMarker.transform.position = new Vector3(endPos.x * cubeSize, 0.3f, endPos.y * cubeSize);
         endMarker.transform.localScale = Vector3.one * (cubeSize * 0.6f);
-        endMarker.GetComponent<Renderer>().material.color = Color.red;
-        endMarker.transform.SetParent(this.transform);
     }
 }
