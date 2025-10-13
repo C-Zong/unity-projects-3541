@@ -2,7 +2,8 @@ Unity Lab3 - CSE 3541 Coursework
 
 Name: Chenyang Zong 🧑‍💻
 
-Unity version: 2022.6 (6000.2.1f1) 🟢
+Unity version: 6000.2.1f1 🟢
+Render Pipeline: Built-in
 
 🎮 User Input
 
