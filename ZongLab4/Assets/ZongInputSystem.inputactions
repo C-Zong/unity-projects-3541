@@ -1,0 +1,63 @@
+{
+    "version": 1,
+    "name": "ZongInputSystem",
+    "maps": [
+        {
+            "name": "Scene",
+            "id": "db3930a0-1a9e-4b80-89d7-e25e29c451e9",
+            "actions": [
+                {
+                    "name": "Visualize",
+                    "type": "Button",
+                    "id": "78e77e79-cc90-48a3-a247-a5d09d90c943",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "d4013e7e-957c-44bb-86b7-edb293e9c93d",
+                    "path": "<Keyboard>/v",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Visualize",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "New action map1",
+            "id": "ca7b0698-b4c7-4209-b429-4b23ecf015a7",
+            "actions": [
+                {
+                    "name": "New action",
+                    "type": "Button",
+                    "id": "e2c7ebc7-ffc3-4842-a531-b9ac2fae0540",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "a5db3708-e237-49d6-ba05-66e438c7c22f",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "New action",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}

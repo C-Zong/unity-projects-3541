@@ -1,8 +1,6 @@
 using UnityEngine;
 
-/*
- * Generates a scene with rooms on top and bottom mirrored along the center.
- */
+// Generates a scene with rooms on top and bottom mirrored along the center.
 public class SceneGenerator : MonoBehaviour
 {
     // Main function to generate the entire scene
